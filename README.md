@@ -1,17 +1,25 @@
 ENCRYPTION AND DECRYPTION TOOL
+
 This application is a comprehensive encryption and decryption tool that allows users to secure their messages using various classical cryptographic algorithms.
 
 Features
 Vernam Cipher
+
 Rail Fence Cipher
+
 Caesar Cipher
+
 Columnar Transposition Cipher
+
 Vigenère Cipher
+
 Atbash Cipher
+
 Playfair Cipher
+
 The app provides an intuitive interface for users to encode and decode their messages securely.
 
-ALGORITHMS
+Algorithms
 Vernam Cipher
 A symmetric cipher that uses a one-time pad. The encryption and decryption are performed by XORing the text with the key.
 
@@ -33,11 +41,24 @@ A substitution cipher where each letter is replaced with its reverse counterpart
 Playfair Cipher
 A digraph substitution cipher that encrypts pairs of letters using a 5x5 key square.
 
-INSTALLATION
+Installation
 
-cd C:\Users\aswin\Desktop\encode\encode
+Step 1: Clone the Repository
+git clone https://github.com/aneesnizam/encryption.git
+cd encryption-app
+
+Step 2: Create and Activate Virtual Environment
+
+For Windows (PowerShell):
+python -m venv encenv
 encenv\Scripts\activate
-python manage.py runserver"# encryption-app"
-"# encryption-app"
-"# encryption-app"
-"# encryption-app"
+
+For macOS/Linux:
+python -m venv encenv
+source encenv/bin/activate
+
+Step 3: Install Dependencies
+pip install -r requirements.txt
+
+Step 4: Run the Application
+python manage.py runserver
