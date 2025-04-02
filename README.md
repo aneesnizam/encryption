@@ -1,6 +1,3 @@
-
-
-
 ENCRYPTION AND DECRYPTION TOOL
 This application is a comprehensive encryption and decryption tool that allows users to secure their messages using various classical cryptographic algorithms.
 
@@ -13,7 +10,6 @@ Vigenère Cipher
 Atbash Cipher
 Playfair Cipher
 The app provides an intuitive interface for users to encode and decode their messages securely.
-
 
 ALGORITHMS
 Vernam Cipher
@@ -37,11 +33,11 @@ A substitution cipher where each letter is replaced with its reverse counterpart
 Playfair Cipher
 A digraph substitution cipher that encrypts pairs of letters using a 5x5 key square.
 
-INSTALLATION 
+INSTALLATION
 
 cd C:\Users\aswin\Desktop\encode\encode
 encenv\Scripts\activate
-python manage.py runserver"# encryption-app" 
-"# encryption-app" 
-"# encryption-app" 
-"# encryption-app" 
+python manage.py runserver"# encryption-app"
+"# encryption-app"
+"# encryption-app"
+"# encryption-app"
