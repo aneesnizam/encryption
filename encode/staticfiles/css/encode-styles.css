@@ -1,0 +1,118 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.encode-container {
+  height: 100%;
+  background-color: #f0f0f0;
+  /* Light gray background */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white background */
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  /* Futuristic font size */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background-color: #ffcc00;
+  /* Yellow background color for buttons */
+  padding: 10px 20px;
+  /* Padding for buttons */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+nav ul li a.active {
+  color: #ffcc00;
+  /* Yellow color for active button */
+}
+
+main {
+  padding: 20px;
+}
+
+.encode-input,
+.encode-output {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent white background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.encode-input label,
+.encode-output label {
+  display: block;
+  margin: 10px;
+  font-size: 18px;
+  /* Futuristic font size */
+}
+
+.encode-dropdown,
+.encode-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  /* Futuristic font size */
+  border: 1px solid #ccc;
+  /* Light gray border */
+  border-radius: 5px;
+}
+
+.encode-button {
+  background-color: #ffcc00;
+  /* Eye-catching yellow */
+  color: #333;
+  /* Dark text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  /* Futuristic font size */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.encode-button:hover {
+  background-color: #ffd633;
+  /* Lighter yellow on hover */
+}
+
+.encode-output textarea[readonly] {
+  background-color: #eee;
+  /* Light gray background for output textarea */
+}

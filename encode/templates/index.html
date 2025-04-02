@@ -1,0 +1,92 @@
+
+<html>
+   
+{% load static %}
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <title>Enco</title>
+    
+    </head>
+    <body>
+
+          <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAmim">
+            
+        </div>
+    </div>
+        
+    <!--nav-->
+<div class="container" >
+    
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark" style="width:118%;margin-left: -110px;">
+  <div class="container-fluid" >
+      <i class="fa fa-shield" style="font-size:36px;color: #00bfff;padding-right: 10px;"></i>
+    <a class="navbar-brand" href="#">ENCO<span style="color: #00bfff">DECO</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+      </ul>
+      <span class="navbar-text" style="padding-right: 20px;color: lightgoldenrodyellow;opacity: 80%">
+        Message Encoding and Decoding
+      </span>
+    </div>
+  </div>
+</nav>
+        
+    
+          <section>
+            <div class="textBox">
+                <h1 style="margin-bottom: 20px;"><span>Encoding</span> Decoding</h1>
+                <p style="margin-bottom: 40px;">Let's secure your messages</p>
+                <button class="homeBtn" style="--i:#fff;" onclick="window.location.href='http://127.0.0.1:8000/encode/';">ENCODE</button>
+                <button class="homeBtn" style="--i:#00bfff;" onclick="window.location.href='http://127.0.0.1:8000/decode/';">DECODE</button>
+            </div>
+        </section>
+    <footer>
+    <div class="bg-dark " style="height: 80px;margin-top: -50px;width:118%;margin-left: -110px;align-content: center;justify-content: center;text-align: center;">
+        
+         
+              
+                        
+                        <p style="margin-bottom: 10px;font-size: 15px;opacity: 70%">This is an encrypted website.Your data is secured.We will not share any of your data</p>
+                    
+                <p class="copyright">Mini project © 2024</p>
+            
+        
+        
+        </div>
+    </footer>
+    
+    
+        </div>
+        
+        
+        <script>
+          const bgAnimation = document.getElementById('bgAnimation');
+
+const numberOfColorBoxes = 400;
+
+for (let i = 0; i < numberOfColorBoxes; i++) {
+    const colorBox = document.createElement('div');
+    colorBox.classList.add('colorBox');
+    bgAnimation.append(colorBox)
+}
+
+        </script>
+    </body>
+</html>

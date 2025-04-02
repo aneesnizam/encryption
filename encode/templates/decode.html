@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoding Page</title>
+    <link rel="stylesheet" href="{% static '/css/encode-styles.css' %}">
+</head>
+
+<body>
+    <div class="encode-container">
+        <header>
+            <h1>Decoder</h1>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/decode/">Decode</a></li>
+                    <li><a href="http://127.0.0.1:8000/encode/">Encode</a></li>
+                    <li><a href="about.html">History</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="encode-form" method="post">
+                {% csrf_token %}
+                <div class="encode-input">
+                    <label for="algorithm">Select Algorithm</label>
+                    <select id="algorithm" name="algorithm" class="encode-dropdown">
+                        <option value="caesar">caesar (integer key)</option>
+                        <option value="vernam">vernam (same length key)</option>
+                        <option value="railfence">railfence (integer key)</option>
+                        <option value="vigenere">vigenere (string key)</option>
+                        <option value="playfair">playfair(string key)</option>
+                        <option value="column">column(string key)</option>
+                        <option value="atbash">atbash(integer key)</option>
+                    </select>
+                    <label for="input-text">Input Text</label>
+                    <textarea id="input-text" name="input-text" class="encode-textarea"></textarea>
+                    <label for="input-key">Input key</label>
+                    <textarea id="input-key" name="input-key" class="encode-textarea"></textarea>
+                    <button class="encode-button" type="submit">Decode</button>
+                </div>
+            </form>
+            {% if result %}
+            <div class="encode-output">
+                <label for="result">Result</label>
+                <textarea id="result" class="encode-textarea" readonly>{{ result }}</textarea>
+                <button class="encode-button" onclick="copyToClipboard()">Copy Result</button>
+            </div>
+            {% endif %}
+        </main>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const resultTextarea = document.getElementById('result');
+            resultTextarea.select();
+            document.execCommand('copy');
+        }
+    </script>
+</body>
+
+</html>
